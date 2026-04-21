@@ -87,7 +87,7 @@ const Landing = () => {
       {/* Feature Tiles */}
       <section id="features" className="features-section">
         <div className="features-grid">
-          
+
           <div className="feature-tile" style={{ '--accent': 'var(--accent-blue)' }} onClick={handleGetStarted}>
             <div className="feature-icon-wrapper">
               <Laptop className="feature-icon" color="var(--accent-blue)" size={28} />
@@ -207,7 +207,7 @@ const Landing = () => {
           <div className="footer-col brand-col">
             <NexusLogo size={24} />
             <p className="tagline">Command Your Enterprise Assets.</p>
-            <p className="copyright">© 2025 NEXUS. All rights reserved.</p>
+            <p className="copyright">© 2026 NEXUS. All rights reserved.</p>
           </div>
           <div className="footer-col">
             <h4>Product</h4>
@@ -223,9 +223,9 @@ const Landing = () => {
           </div>
           <div className="footer-col">
             <h4>Team</h4>
-            <p>Built by Antigravity</p>
+            <p>Built by Team Nexus</p>
             <p>VTU FSD Mini Project</p>
-            <p>Contact: admin@nexus.local</p>
+            <p>Contact: admin@nexus.canara</p>
           </div>
         </div>
         <div className="footer-bottom">
