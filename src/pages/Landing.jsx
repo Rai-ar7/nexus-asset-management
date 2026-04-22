@@ -11,6 +11,7 @@ const Landing = () => {
   const isLoggedIn = !!(user && token);
 
   const handleGetStarted = () => navigate(isLoggedIn ? '/dashboard' : '/login');
+  const handleTileClick = (path) => navigate(isLoggedIn ? path : '/login');
 
   return (
     <div className="landing-page">
@@ -88,7 +89,7 @@ const Landing = () => {
       <section id="features" className="features-section">
         <div className="features-grid">
 
-          <div className="feature-tile" style={{ '--accent': 'var(--accent-blue)' }} onClick={handleGetStarted}>
+          <div className="feature-tile" style={{ '--accent': 'var(--accent-blue)' }} onClick={() => handleTileClick('/dashboard/assets')}>
             <div className="feature-icon-wrapper">
               <Laptop className="feature-icon" color="var(--accent-blue)" size={28} />
             </div>
@@ -102,7 +103,7 @@ const Landing = () => {
             <button className="btn-outline tile-btn">Manage Assets</button>
           </div>
 
-          <div className="feature-tile" style={{ '--accent': 'var(--accent-cyan)' }} onClick={handleGetStarted}>
+          <div className="feature-tile" style={{ '--accent': 'var(--accent-cyan)' }} onClick={() => handleTileClick('/dashboard/employees')}>
             <div className="feature-icon-wrapper">
               <Users className="feature-icon" color="var(--accent-cyan)" size={28} />
             </div>
@@ -116,7 +117,7 @@ const Landing = () => {
             <button className="btn-outline tile-btn">View Employees</button>
           </div>
 
-          <div className="feature-tile" style={{ '--accent': 'var(--accent-green)' }} onClick={handleGetStarted}>
+          <div className="feature-tile" style={{ '--accent': 'var(--accent-green)' }} onClick={() => handleTileClick('/dashboard/assignments')}>
             <div className="feature-icon-wrapper">
               <RefreshCcw className="feature-icon" color="var(--accent-green)" size={28} />
             </div>
@@ -130,7 +131,7 @@ const Landing = () => {
             <button className="btn-outline tile-btn">Assign Now</button>
           </div>
 
-          <div className="feature-tile" style={{ '--accent': 'var(--accent-amber)' }} onClick={handleGetStarted}>
+          <div className="feature-tile" style={{ '--accent': 'var(--accent-amber)' }} onClick={() => handleTileClick('/dashboard')}>
             <div className="feature-icon-wrapper">
               <BarChart3 className="feature-icon" color="var(--accent-amber)" size={28} />
             </div>
